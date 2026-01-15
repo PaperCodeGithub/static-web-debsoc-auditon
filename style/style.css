@@ -1,0 +1,260 @@
+:root {
+    --bg-dark: #0a0a0f;
+    --bg-card: rgba(255, 255, 255, 0.03);
+    --accent-pink: #ff9a9e;
+    --accent-purple: #c471ed;
+    --text-main: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-title: 'Georgia', serif;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit; 
+}
+
+
+.hero-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 10%, #2d1b2e 0%, #0a0a0f 70%);
+    padding: 100px 20px 80px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 154, 158, 0.1);
+}
+
+.container-hero {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-pink);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.main-title {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 40px;
+    background: linear-gradient(90deg, #fff 0%, #ff9a9e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 10px 30px rgba(255, 154, 158, 0.2);
+}
+
+
+.poem-card {
+    display: inline-block;
+    background: var(--bg-card);
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 16px;
+    font-style: italic;
+    color: #d1c4e9;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    transition: box-all 1s ease;
+}
+
+.poem-card:hover {
+    transform: scale(1.005);
+    box-shadow: 0 8px 40px rgba(255, 154, 158, 0.2);
+}
+
+.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+    color: #ff9a9e; /* Matches your pink accent */
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.content-section {
+    padding: 100px 40px;
+    background-color: var(--bg-dark);
+}
+
+.container-section {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+.greet-box {
+    flex: 1;
+    min-width: 200px;
+}
+
+.greet-box h2 {
+    font-family: var(--font-heading);
+    font-size: 4.5rem;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.1);
+    -webkit-text-stroke: 1px var(--accent-pink);
+}
+
+.event-description {
+    flex: 2;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+.event-description strong {
+    color: white;
+    font-weight: 600;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+.prize-highlight {
+    margin-top: 30px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid var(--accent-pink);
+    border-radius: 50px;
+    color: var(--accent-pink);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.prize-highlight:hover {
+    background-color: var(--accent-pink);
+    color: #0a0a0f;
+}
+
+.details-section {
+    background-color: #0f0f14;
+    padding: 80px 20px;
+}
+
+.event-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.detail-item {
+    background: linear-gradient(145deg, #16161e, #111116);
+    padding: 40px 30px;
+    border-radius: 20px;
+    min-width: 220px;
+    text-align: center;
+    border-top: 2px solid transparent;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+
+.detail-item:hover {
+    transform: translateY(-10px);
+    border-top-color: var(--accent-pink);
+    box-shadow: 0 20px 40px rgba(255, 154, 158, 0.1);
+}
+
+.detail-item .icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+.detail-item h3 {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.detail-item p {
+    font-size: 1.5rem;
+    font-family: var(--font-heading);
+    color: #fff;
+}
+
+
+footer {
+    background-color: #050508;
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+footer h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.footer-link {
+    font-size: 1.1rem;
+    color: var(--accent-pink);
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.footer-link:hover {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3.5rem;
+    }
+    
+    .container-section {
+        flex-direction: column; /* Stack strictly on mobile */
+        gap: 40px;
+    }
+
+    .greet-box h2 {
+        font-size: 3.5rem;
+    }
+    
+    .event-description {
+        width: 100%;
+    }
+}
